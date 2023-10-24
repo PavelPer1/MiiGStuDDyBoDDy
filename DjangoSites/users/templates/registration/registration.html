@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>registration</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <div class="login">
+      <div class="login__card card">
+        <div class="card__title">Регистрация</div>
+        <div class="card__form form">
+          <input class="form__input" type="text" name="username" placeholder="Введите логин" />
+          <input
+            class="form__input"
+            type="password"
+            name="password1"
+            placeholder="Введите пароль"
+          />
+          <input
+            class="form__input"
+            type="password"
+            name="password2"
+            placeholder="Повторите пароль"
+          />
+        </div>
+        <div class="card__footer footer">
+          <button class="footer__login">Зарегистрироваться</button>
+          <div class="footer__text text">
+            <span class="text__question">Уже есть аккаунт?</span>
+            <a class="text__link" href="{% url 'login' %}">Войти</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</form>
+</body>
+</html>
