@@ -5,6 +5,12 @@
     <title>Главная</title>
 </head>
 <body>
-
+    <div>
+        {% if  request.user.is_authenticated %}
+            <h1>Пользователь {{user.username}} авторизован</h1>
+        {% else %}
+            <h1>Пользователь не авторизован</h1>
+        {% endif %}
+    </div>
 </body>
 </html>

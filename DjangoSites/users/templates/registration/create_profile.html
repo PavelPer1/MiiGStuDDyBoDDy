@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Заполните профиль</title>
+</head>
+<body>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'about')">Информация о себе</button>
+  <button class="tablinks" onclick="openCity(event, 'help_me')">Мне нужна помощь</button>
+  <button class="tablinks" onclick="openCity(event, 'help')">Я могу помочь</button>
+</div>
+<div id="about" class="tabcontent">
+     <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="edit-profile">
+      <div class="edit-profile__profile-card profile-card">
+        <span class="profile-card__title">Заполните профиль</span>
+        <div class="profile-card__form form">
+          <div class="form__inputs inputs">
+            <input class="inputs__item" type="text" placeholder="ФИО" name="fio" />
+            <input
+              class="inputs__item _purple"
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
+            <input
+              class="inputs__item"
+              type="tel"
+              name="number"
+              placeholder="Номер телефона"
+            />
+              <input
+              class="inputs__item"
+              type="speciality"
+              name="speciality"
+              placeholder="Специаьность"
+            />
+              <input
+              class="inputs__item"
+              type="well"
+              name="well"
+              placeholder="Номер курса"
+            />
+              <input
+              class="inputs__item"
+              type="add_information"
+              name="add_information"
+              placeholder="Дополнительная информация"
+            />
+          </div>
+          <div class="form__upload upload">
+            <span class="upload__placeholder">Загрузить</br>фото</span>
+            <input class="upload__input" type="file" name="avatar" />
+          </div>
+        </div>
+
+      </div>
+      <button type="submit" class="profile-card__submit button">Сохранить</button>
+    </div>
+    </form>
+</div>
+<div id="help_me" class="tabcontent">Мне нужна помощь в:</div>
+<div id="help" class="tabcontent">Я могу помочь:</div>
+</body>
+</html>
