@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from .models import Profile
+from .models import Profile, HelpMe, IcanHelp
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.forms import ModelForm
 
@@ -27,3 +27,18 @@ class CreateUserForm(ModelForm):
                   'email', 'number',
                   'speciality', 'well',
                   'add_information')
+
+
+class HelpMeForm(ModelForm):
+
+    class Meta:
+        model = HelpMe
+        fields = ('item', 'add_information')
+
+
+class IcanHelpForm(ModelForm):
+
+    class Meta:
+        model = IcanHelp
+        fields = ('items', 'skills')
+

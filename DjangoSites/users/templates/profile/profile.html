@@ -1,0 +1,83 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <div class="profile">
+        <div class="content">
+            <div class="profile-info">
+                <h2>Мой профиль</h2>
+                <div class="avatar">
+                    <img src="{{ user.profile.avatar.url}}">
+                </div>
+                <p>Имя: {{user.profile.fio}}</p>
+                <p>Email: {{user.profile.email}}</p>
+                <p>Номер телефона: {{user.profile.number}}</p>
+                <p>Специальность: {{user.profile.speciality}}</p>
+                <p>Номер курса: {{user.profile.well}}</p>
+                <p>Дополнительная информация: {{user.profile.add_information}}</p>
+
+              </div>
+
+          </div>
+
+      </div>
+<div>
+
+<form method="post">
+
+    {% csrf_token %}
+    <label>Выберите предмет:</label>
+    <select id="" name="item">
+        {% for i in science %}
+            <option>{{i}}</option>
+    {% endfor %}
+  </select>
+
+
+    <input
+            class="form__input"
+            type="text"
+            name="add_information"
+            placeholder="Введите дополнительную информацию"
+          />
+
+    <button type="submit" name="helpme" >Сохранить</button>
+    <br>
+    <label >Выберите предмет:</label>
+    <select  name="items">
+        {% for i in science %}
+            <option>{{i.scn}}</option>
+    {% endfor %}
+  </select>
+    <input
+            class="form__input"
+            type="text"
+            name="skills"
+            placeholder="Введите свои умения"
+          />
+
+    <button type="submit" name="can_help" >Сохранить</button>
+
+</form>
+    <a href="{% url 'profile' %}"> ffff</a>
+
+</div>
+<div>
+    <h1>Мне нужна помощь</h1>
+    {% for i in obj1 %}
+    <h2>{{i.item}}</h2>
+    {% endfor %}
+</div>
+<div style="margin-left:350px">
+    <h1>Я могу помочь</h1>
+    {% for i in obj2 %}
+    <h2>{{i.items}}</h2>
+    {% endfor %}
+</div>
+</body>
+</html>
