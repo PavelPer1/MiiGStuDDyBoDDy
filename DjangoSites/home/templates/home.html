@@ -15,7 +15,7 @@
 <div>
     <label>Мои предложения</label><br>
     {% for i in all_offer_cards %}
-    <a href=""></ahref>
+    <a href="{% url 'offer' i.id %}">
         <div style="background-color: yellow">
             <h3>{{i.user}}</h3>
             <h3>{{i.item}}</h3>

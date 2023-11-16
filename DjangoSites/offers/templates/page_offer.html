@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{inform_offer.user_id}}</title>
+</head>
+<body>
+<label>Пользователь:</label><br>
+    {{users_profile.fio}}<br>
+    {{users_profile.number}}<br>
+    {{users_profile.email}}<br>
+
+<label>Информация:</label><br>
+    {{inform_offer.item}}<br>
+    {{inform_offer.add_information}}<br>
+<form method="POST">
+    {%  csrf_token %}
+<button type="submit" name="response" >Откликнуться</button>
+    </form>
+</body>
+</html>
