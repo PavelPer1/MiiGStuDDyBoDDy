@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from users.models import HelpMe, Profile
 from .models import CreateOffers
+from django.core.mail import send_mail, EmailMessage
+from Mysite import settings
 
 
 def page_offer(request, offer):
@@ -19,6 +21,19 @@ def page_offer(request, offer):
         )
 
         of.save()
+        data = f"""
+        Привет на твою запись откликнулся {request.user.username}
+        Заходи на сайт и начинай заниматься!!!!
+                ((()))((()))
+                    (())
+        """
+        email = EmailMessage(
+            subject='Отклик',
+            body=data,
+            from_email='mstuddybuddy@mail.ru',
+            to=['lolhyh456@gmail.com']
+        )
+        email.send()
 
     context = {
         'inform_offer': inform_offer,
