@@ -1,0 +1,226 @@
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.bar {
+
+  display: inline-block; /* Элементы будут отображаться в строку */
+  width: 100vw; /* Ширина линии на 100% ширины родительского элемента */
+  height: 93px; /* Высота линии (можете настроить по своему усмотрению) */
+  background-color: #000072; /* Цвет линии, в данном случае синий */
+}
+
+.prioritet img{
+  margin-left: 350px; /* Отступ справа (по вашему выбору) */
+  margin-top: 28px; /* Отступ сверху (по вашему выбору) */
+  float: left; /* Перемещает элемент в левую часть экрана */
+}
+/* Пример для класса "vk" */
+.vk img {
+  margin-top: 28px; /* Отступ сверху (по вашему выбору) */
+  float: right; /* Перемещает элемент в левую часть экрана */
+  width: 60px; /* Установить ширину изображения в 50 пикселей */
+  height: 33px; /* Сохранить пропорции, автоматически вычислить высоту */
+}
+
+/* Пример для класса "tg" */
+.tg img {
+  margin-top: 28px; /* Отступ сверху (по вашему выбору) */
+  float: right; /* Перемещает элемент в левую часть экрана */
+  width: 60px; /* Установить ширину изображения в 40 пикселей */
+  height: 33px; /* Сохранить пропорции, автоматически вычислить высоту */
+}
+.profile{
+  margin-right: 350px; /* Отступ справа (по вашему выбору) */
+  margin-top: 10px; /* Отступ сверху (по вашему выбору) */
+  float: right; /* Перемещает элемент в левую часть экрана */
+}
+
+.enjoy-css {
+  height: 59px;
+  width: 271px;
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 0.5em;
+  padding: 0 1.5em;
+  border: 1px solid rgba(255,255,255,1);
+  -webkit-border-radius: 2.2em;
+  border-radius: 2.2em;
+  font: normal normal bold 1em/2em Arial, Helvetica, sans-serif;
+  color: #ffff;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  white-space: nowrap;
+  background: #ffff;
+  -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,0.8) , 0 0 0 0 rgba(0,0,0,0.298039) ;
+  box-shadow: 0 0 1px 1px rgba(255,255,255,0.8) , 0 0 0 0 rgba(0,0,0,0.298039) ;
+  text-shadow: 0 0 0 rgba(255,255,255,0.8) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+.enjoy-css:hover {
+  cursor: pointer;
+  border: 1px solid rgba(178,178,178,1);
+  -webkit-border-radius: 0.2em;
+  border-radius: 0.2em;
+  color: #ffff;
+  -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,0.8) inset, 0 1px 0 0 rgba(0,0,0,0.298039) ;
+  box-shadow: 0 0 1px 1px rgba(255,255,255,0.8) inset, 0 1px 0 0 rgba(0,0,0,0.298039) ;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.8) ;
+}
+
+.enjoy-css:active {
+  position: relative;
+  cursor: default;
+  top: 1px;
+  border: 1px solid rgba(211,211,211,1);
+  color: #ffff;
+  background: #ffff;
+  -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,0.8) inset, 0 1px 0 0 rgba(0,0,0,0.298039) inset;
+  box-shadow: 0 0 1px 1px rgba(255,255,255,0.8) inset, 0 1px 0 0 rgba(0,0,0,0.298039) inset;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+form {
+  display: flex;
+  align-items: center;
+}
+
+input[type="search"] {
+  border: 2px solid  #000072; /* Синие границы */
+  border-radius: 25px; /* Радиус границы для создания округлой формы */
+  padding: 5px 10px; /* Подходящая высота и отступы */
+}
+
+button[type="submit"] {
+  background-color: white; /* Белый фон */
+  border: 2px solid  #000072; /* Синие границы */
+  border-radius: 25px; /* Радиус границы для создания округлой формы */
+  padding: 5px 20px; /* Подходящая высота и отступы */
+  margin-left: 10px; /* Отступ между полем ввода и кнопкой (по вашему выбору) */
+  cursor: pointer; /* Изменение курсора при наведении */
+}
+
+button[type="submit"]:hover {
+  background-color: #f0f0f0; /* Изменение цвета фона при наведении (по вашему выбору) */
+}
+.search {
+  margin-top: 20px;
+  display: flex; /* Разместить дочерние элементы горизонтально */
+  align-items: center; /* Выровнять элементы вертикально по центру */
+}
+
+.srch_bar{
+  margin-left:500px;
+}
+.srch_bar, form, img {
+  margin-right: 30px; /* Добавить отступ между элементами (по вашему выбору) */
+}
+
+/* Если вы хотите, чтобы элементы были в строку слева направо, вы можете добавить следующее: */
+.srch_bar, form, img {
+  flex: 0 0 auto; /* Определить размер элемента, чтобы они не растягивались */
+}
+.m245{
+  height: 119px;
+  width: 200px;
+}
+.tag {
+  margin-top: 30px;
+  margin-left:400px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 1070px;
+  height: 280px;
+  border: 3px solid #000072;
+  -webkit-border-radius: 6px;
+  border-radius: 40px;
+  font: normal 16px/1 "Times New Roman", Times, serif;
+  color: black;
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.post {
+  margin-top: 30px;
+  margin-left:200px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 1570px;
+  height: 290px;
+  border: 3px solid #000072;
+  -webkit-border-radius: 6px;
+  border-radius: 40px;
+  font: normal 16px/1 "Times New Roman", Times, serif;
+  color: black;
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: flex;
+}
+.pd {
+  display: flex; /* Элементы будут располагаться в строку */
+}
+.avatar{
+  margin-top: 30px;
+  margin-left: 25px;
+  float: left;
+  width: 362px;
+  height: 230px;
+  border-radius: 20%
+}
+.info{
+  margin-left:60px;
+
+}
+.name, .group{
+  margin-left:60px;
+  margin-top: 30px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: auto; /* Размер будет динамическим в зависимости от содержимого */
+  min-width: 300px; /* Максимальная ширина, чтобы ограничить размер, если нужно */
+  height: 80px;
+  border: 0px solid #000072;
+  -webkit-border-radius: 6px;
+  border-radius: 30px;
+  font: normal 16px/1 "Times New Roman", Times, serif;
+  color: black;
+  text-align: center !important;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background-color: #D9D9D9;
+  text-align: center; /* Выравнивание текста по центру */
+}
+.skills{
+  margin-top: 20px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: auto;
+  min-width: 500px;
+  height: 80px;
+  border: 0px solid #000072;
+  -webkit-border-radius: 6px;
+  border-radius: 30px;
+  font: normal 16px/1 "Times New Roman", Times, serif;
+  color: black;
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background-color: #D9D9D9;
+  text-align: left; /* Выравнивание текста по центру */
+}

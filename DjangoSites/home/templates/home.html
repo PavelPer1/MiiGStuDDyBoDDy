@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,4 +24,66 @@
     {% endfor %}
 </div>
 </body>
+</html>-->
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+        <!--<link rel="stylesheet" href="main.css">-->
+    </head>
+    <body>
+        <div class="bar">
+            <a class="prioritet" href="#">
+                <img src="{% static 'img/priority.svg' %}" >
+            </a>
+            <div class="tg_vk">
+            <a class="profile">
+                <button class="enjoy-css">
+                    <div>
+                        {% if  request.user.is_authenticated %}
+                            <h1>Пользователь {{user.username}} авторизован</h1>
+                        {% else %}
+                            <h1>Пользователь не авторизован</h1>
+                        {% endif %}
+                    </div>
+                </button>
+            </a>
+            <a class="vk">
+                <img src="{% static 'img/vk.svg' %}">
+            </a>
+            <a class="tg">
+                <img src="{% static 'img/tg.svg' %}">
+            </a>
+            </div>
+            
+        </div>
+        <div class="search">
+            <div class="srch_bar"></div>
+            <img src="{% static 'img/logo.svg' %}">
+            <img class="m245" src="{% static 'img/m245.svg' %}">
+            <form action="" method="get">
+                <input name="s" placeholder="Искать здесь..." type="search">
+                <button type="submit">Поиск</button>
+              </form>
+        </div>
+        <div class="tags">
+            <div class="tag"></div>
+        </div>
+        <div class="posts">
+            {% for i in all_offer_cards %}
+            <div class="post">
+                <img class="avatar"></img>
+                <div class="info">
+                    <div class="pd">
+                        <div class="name">i.user</div>
+                        <div class="group">i.item</div>
+                    </div>
+                    <div class="skills">i.add_information</div>
+
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </body>
 </html>
