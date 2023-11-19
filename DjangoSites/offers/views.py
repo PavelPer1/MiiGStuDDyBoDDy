@@ -31,7 +31,7 @@ def page_offer(request, offer):
             subject='Отклик',
             body=data,
             from_email='mstuddybuddy@mail.ru',
-            to=['lolhyh456@gmail.com']
+            to=[users_profile.email]
         )
         email.send()
 
