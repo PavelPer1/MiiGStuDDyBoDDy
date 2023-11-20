@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Мои Предложения</title>
+</head>
+<body>
+<label>Мои предложения:</label>
+    {% for i in my_offers %}
+        <a href="#"><h1>Откликнуля: {{i.user}} готов помочь с {{i.offer}}</h1></a>
+    {% endfor %}
+</body>
+</html>

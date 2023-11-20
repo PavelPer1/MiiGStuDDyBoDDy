@@ -41,3 +41,13 @@ def page_offer(request, offer):
     }
 
     return render(request, 'page_offer.html', context)
+
+
+def get_my_offers(request):
+    my_offers = CreateOffers.objects.filter(user_offer_id=request.user.id)
+
+    context = {
+        'my_offers': my_offers
+    }
+
+    return render(request, 'my_offers.html', context)
