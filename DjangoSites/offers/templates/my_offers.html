@@ -5,9 +5,27 @@
     <title>Мои Предложения</title>
 </head>
 <body>
-<label>Мои предложения:</label>
+<label>Мои предложения:</label><br>
     {% for i in my_offers %}
-        <a href="#"><h1>Откликнуля: {{i.user}} готов помочь с {{i.offer}}</h1></a>
+
+        <h3>{{i.id}})Откликнуля: {{i.user}} готов помочь с {{i.offer}}</h3>
     {% endfor %}
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Находим все h3 элементы под заголовком "Мои предложения"
+        const offerElements = document.querySelectorAll("h3");
+
+        // Для каждого найденного элемента добавляем обработчик клика
+        offerElements.forEach(function(element) {
+            element.addEventListener('click', function() {
+                // Получаем текст элемента и устанавливаем его в качестве значения roomName
+                var roomName = this.textContent.trim().split(')')[0];
+                window.location.pathname = 'offers/my_offers/' + roomName + '/';
+            });
+        });
+    });
+</script>
+
 </body>
 </html>

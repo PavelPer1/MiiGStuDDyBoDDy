@@ -1,6 +1,10 @@
+import json
+
 from django.shortcuts import render
+from django.utils.safestring import mark_safe
+
 from users.models import HelpMe, Profile
-from .models import CreateOffers
+from .models import CreateOffers, ChatMessage
 from django.core.mail import send_mail, EmailMessage
 from Mysite import settings
 
@@ -51,3 +55,14 @@ def get_my_offers(request):
     }
 
     return render(request, 'my_offers.html', context)
+
+
+def room_view(request, room_name):
+    all_message = ChatMessage.objects.filter(room_name=room_name)
+
+    return render(request, 'room.html', {
+        'room_name': room_name,
+        'all_message': all_message
+    })
+
+

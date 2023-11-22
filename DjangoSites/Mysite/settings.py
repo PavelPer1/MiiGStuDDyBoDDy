@@ -30,16 +30,19 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
+    "daphne",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users', 'home', 'offers', 'chat'
+    'channels',
+    'users', 'home', 'offers'
 ]
 
 MIDDLEWARE = [
@@ -137,6 +140,17 @@ EMAIL_USE_SSL = True
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'mstuddybuddy@mail.ru'
 EMAIL_HOST_PASSWORD = 'VnwkJxN3qrrB7KitHiQq'
+
+ASGI_APPLICATION = "Mysite.routing.application"
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 
 
 
